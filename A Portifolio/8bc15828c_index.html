@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- SEO Meta Tags -->
+    <title>Mohammad Sahil | Data Analyst Portfolio</title>
+    <meta name="description" content="Mohammad Sahil — Data Analyst based in Doha, Qatar. Skilled in SQL, Python, Power BI, and Advanced Excel. View live projects, certifications, and download CV.">
+    <meta name="keywords" content="Mohammad Sahil, Data Analyst, Doha Qatar, SQL, Python, Power BI, Data Analytics, Business Intelligence, Data Visualization">
+    <meta name="author" content="Mohammad Sahil">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Mohammad Sahil | Data Analyst Portfolio">
+    <meta property="og:description" content="Data Analyst based in Doha, Qatar. Skilled in SQL, Python, Power BI, and Advanced Excel.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mohammad-sahil1.github.io/mohammad-sahil-portfolio/">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mohammad Sahil | Data Analyst Portfolio">
+    <meta name="twitter:description" content="Data Analyst based in Doha, Qatar. Skilled in SQL, Python, Power BI, and Advanced Excel.">
+    
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mohammad Sahil",
+      "jobTitle": "Data Analyst",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Doha",
+        "addressCountry": "Qatar"
+      },
+      "email": "msahil2811@gmail.com",
+      "telephone": "+97455521940",
+      "url": "https://mohammad-sahil1.github.io/mohammad-sahil-portfolio/",
+      "sameAs": [
+        "https://github.com/Mohammad-Sahil1"
+      ],
+      "knowsAbout": ["SQL", "Python", "Power BI", "Data Analytics", "Business Intelligence", "Data Visualization", "Advanced Excel"]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "navy-deep": "#0a1628",
+                        "navy-mid": "#0f1e3a",
+                        "navy-card": "#132544",
+                        "blue-accent": "#3b82f6",
+                        "blue-light": "#60a5fa",
+                        "blue-dark": "#1d4ed8",
+                        "text-primary": "#e2e8f0",
+                        "text-secondary": "#94a3b8",
+                        "text-muted": "#64748b",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"],
+                    },
+                    fontSize: {
+                        "display": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                        "headline": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a1628;
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #132544, #0f1e3a);
+            border: 1px solid rgba(59, 130, 246, 0.12);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            border-color: rgba(59, 130, 246, 0.35);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(59, 130, 246, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            color: #60a5fa;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        .btn-outline:hover {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: #3b82f6;
+        }
+
+        .tag {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            color: #60a5fa;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            padding: 4px 12px;
+            border-radius: 6px;
+        }
+
+        .achievement-bar {
+            background: linear-gradient(135deg, #0f1e3a, #132544);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+            border-radius: 12px;
+        }
+
+        .section-label {
+            color: #3b82f6;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .nav-link {
+            color: #94a3b8;
+            transition: color 0.2s;
+        }
+        .nav-link:hover, .nav-link.active-nav {
+            color: #60a5fa;
+        }
+
+        .grid-bg {
+            background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.06) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden grid-bg">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#0a1628]/95 backdrop-blur-md border-b border-blue-accent/15">
+    <div class="flex justify-between items-center max-w-[1200px] mx-auto px-4 md:px-16 h-16">
+        <div class="font-semibold text-lg text-text-primary flex items-center gap-3">
+            <span class="text-blue-accent">MS</span>
+            <span class="hidden sm:inline text-sm text-text-secondary font-mono">Data Analyst</span>
+        </div>
+
+        <div class="md:hidden text-blue-accent text-2xl cursor-pointer" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+            <span class="material-symbols-outlined">menu</span>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden absolute top-16 left-0 w-full bg-navy-deep border-b border-blue-accent/15 flex-col gap-2 p-4">
+            <a class="nav-link px-4 py-3 block" href="#home">Home</a>
+            <a class="nav-link px-4 py-3 block" href="#about">About</a>
+            <a class="nav-link px-4 py-3 block" href="#projects">Projects</a>
+            <a class="nav-link px-4 py-3 block" href="#skills">Skills</a>
+            <a class="nav-link px-4 py-3 block" href="#contact">Contact</a>
+        </div>
+
+        <div class="hidden md:flex items-center gap-8">
+            <a class="nav-link text-sm transition" href="#home">Home</a>
+            <a class="nav-link text-sm transition" href="#about">About</a>
+            <a class="nav-link text-sm transition" href="#projects">Projects</a>
+            <a class="nav-link text-sm transition" href="#skills">Skills</a>
+            <a class="nav-link text-sm transition" href="#contact">Contact</a>
+            <a href="Mohammad_Sahil_CV.pdf" download class="btn-primary px-5 py-2 text-sm flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm">download</span> Download CV
+            </a>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <!-- 1. HOME / HERO SECTION -->
+    <section class="relative min-h-screen flex flex-col justify-center pt-24 pb-12 px-4 md:px-16" id="home">
+        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="flex flex-col items-start">
+                <div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full tag">
+                    <span class="w-2 h-2 rounded-full bg-blue-accent animate-pulse"></span>
+                    AVAILABLE FOR OPPORTUNITIES
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-text-primary mb-6 leading-tight">
+                    Mohammad Sahil<br><span class="text-blue-light">Data Analyst</span>
+                </h1>
+                <p class="text-text-secondary mb-8 max-w-lg leading-relaxed text-base">
+                    Entry-level Data Analyst passionate about turning raw data into meaningful insights. Skilled in SQL, Python, Power BI, and Advanced Excel to solve real-world business problems.
+                </p>
+
+                <!-- Core Skills Tags -->
+                <div class="flex flex-wrap gap-3 mb-8">
+                    <span class="tag flex items-center gap-1.5"><img src="https://cdn.simpleicons.org/mysql/00758F" class="w-3.5 h-3.5" alt="SQL">SQL</span>
+                    <span class="tag flex items-center gap-1.5"><img src="https://cdn.simpleicons.org/python/3776AB" class="w-3.5 h-3.5" alt="Python">Python</span>
+                    <span class="tag flex items-center gap-1.5"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/New_Power_BI_Logo.svg" class="w-3.5 h-3.5" alt="Power BI">Power BI</span>
+                    <span class="tag flex items-center gap-1.5"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_Office_Excel_(2019%E2%80%932025).svg" class="w-3.5 h-3.5" alt="Excel">Advanced Excel</span>
+                    <span class="tag flex items-center gap-1.5"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tableau_Logo.png" class="w-3.5 h-3.5 object-contain" alt="Tableau">Tableau</span>
+                </div>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects" class="btn-primary px-6 py-3 text-sm flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">folder_open</span> View Projects
+                    </a>
+                    <a href="https://mohammad-sahil1.github.io/Sahils_AI_DataStudio_v5/" target="_blank" rel="noopener" class="btn-outline px-6 py-3 text-sm flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">code</span> Launch Data Studio
+                    </a>
+                    <a href="https://github.com/Mohammad-Sahil1" target="_blank" rel="noopener noreferrer" class="btn-outline px-6 py-3 text-sm flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">terminal</span> GitHub
+                    </a>
+                    <a href="Mohammad_Sahil_CV.pdf" download class="btn-primary px-6 py-3 text-sm flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">download</span> Download CV
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Photo -->
+            <div class="relative flex justify-center md:justify-end">
+                <div class="relative">
+                    <div class="absolute -inset-3 bg-blue-accent/10 rounded-2xl blur-2xl"></div>
+                    <div class="relative card p-2 rounded-2xl overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ0ekUG8D6Rde3WQ4s1UG5CPTmKHe56Hij20OyLOjo638eV4F52VCUHLmYiUcQew6QGMSba-74xNrOTkdyChlxhOvON6sOIQOX0WGmxRRF5WO5dIpHyuS8qHEA29Usp6xrMSnEyDElh0L3Sv-hb3NGykePQiJdDMSwx6C3zfWUffE1kXE5xCKYc91WZtDQby0fjLm3yC7nkkqQoyKRQvREYdtXb5naBuzG7HwWx0zugehyVb0Tn25pyoZWhqMcJNQpzA" alt="Mohammad Sahil Profile Photo" class="w-full max-w-sm h-auto rounded-xl object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Achievements Bar -->
+        <div class="max-w-[1200px] mx-auto mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="achievement-bar p-6 text-center">
+                <h3 class="text-3xl font-bold text-blue-light mb-1">3+</h3>
+                <p class="text-xs text-text-secondary font-mono uppercase">Live Projects</p>
+            </div>
+            <div class="achievement-bar p-6 text-center">
+                <h3 class="text-3xl font-bold text-blue-light mb-1">95%</h3>
+                <p class="text-xs text-text-secondary font-mono uppercase">Data Accuracy</p>
+            </div>
+            <div class="achievement-bar p-6 text-center">
+                <h3 class="text-3xl font-bold text-blue-light mb-1">5+</h3>
+                <p class="text-xs text-text-secondary font-mono uppercase">Certifications</p>
+            </div>
+            <div class="achievement-bar p-6 text-center">
+                <h3 class="text-3xl font-bold text-blue-light mb-1">2+</h3>
+                <p class="text-xs text-text-secondary font-mono uppercase">Years Experience</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. ABOUT SECTION -->
+    <section id="about" class="max-w-[1200px] mx-auto px-4 md:px-16 py-20">
+        <div class="card p-8 md:p-12">
+            <p class="section-label mb-2">ABOUT</p>
+            <h2 class="text-2xl font-semibold text-text-primary mb-6">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="text-text-secondary leading-relaxed mb-4">
+                        I am a passionate Data Analyst with a strong foundation in transforming raw data into actionable insights. With expertise in SQL, Python, Power BI, and Advanced Excel, I specialize in uncovering trends, building interactive dashboards, and driving data-informed business decisions.
+                    </p>
+                    <p class="text-text-secondary leading-relaxed">
+                        Currently working at Ooredoo Qatar as a Sales and Customer Service Representative, I am actively transitioning into a full-time Data Analyst role. I have built multiple live data analytics tools and dashboards to demonstrate my skills in real-world business scenarios. This portfolio itself is deployed both on GitHub and as a standalone online portfolio, showcasing my ability to deliver end-to-end solutions.
+                    </p>
+                </div>
+                <div class="border-l-2 border-blue-accent/30 pl-8">
+                    <p class="section-label mb-4">CURRENT FOCUS</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-text-secondary">
+                            <span class="material-symbols-outlined text-blue-accent text-xl">check_circle</span>
+                            Building interactive data analytics dashboards
+                        </li>
+                        <li class="flex items-center gap-3 text-text-secondary">
+                            <span class="material-symbols-outlined text-blue-accent text-xl">check_circle</span>
+                            Advanced Python and ML techniques
+                        </li>
+                        <li class="flex items-center gap-3 text-text-secondary">
+                            <span class="material-symbols-outlined text-blue-accent text-xl">check_circle</span>
+                            Business Intelligence and Strategy
+                        </li>
+                        <li class="flex items-center gap-3 text-text-secondary">
+                            <span class="material-symbols-outlined text-blue-accent text-xl">check_circle</span>
+                            Available immediately with NOC from employer
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PROJECTS SECTION -->
+    <section id="projects" class="max-w-[1200px] mx-auto px-4 md:px-16 py-20">
+        <div class="mb-12">
+            <p class="section-label mb-2">PORTFOLIO_EXHIBIT</p>
+            <h2 class="text-2xl font-semibold text-text-primary">Featured Projects</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Project 1: AI Data Studio -->
+            <div class="card overflow-hidden">
+                <div class="h-48 relative overflow-hidden bg-navy-mid">
+                    <img src="WhatsApp%20Image%202026-08-03%20at%206.51.59%20PM.jpeg" alt="Sahil's AI Data Studio v5.0 Dashboard Preview" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-transparent opacity-60"></div>
+                </div>
+                <div class="p-6">
+                    <div class="flex gap-2 mb-4">
+                        <span class="tag flex items-center gap-1.5"><img src="https://cdn.simpleicons.org/html5/e34f26" class="w-3.5 h-3.5" alt="HTML5">HTML</span>
+                        <span class="tag flex items-center gap-1.5"><img src="https://cdn.simpleicons.org/javascript/f7df1e" class="w-3.5 h-3.5" alt="JavaScript">JS</span>
+                        <span class="tag">ECHARTS</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-text-primary mb-3">Sahil's AI Data Studio v5.0</h4>
+                    <p class="text-text-secondary text-sm mb-6">
+                        Full-featured data analytics web app. Upload any CSV, Excel, or JSON file and clean, analyze, and visualize it instantly. Includes predictive imputation and chunk-based processing.
+                    </p>
+                    <a href="https://mohammad-sahil1.github.io/Sahils_AI_DataStudio_v5/" target="_blank" rel="noopener" class="btn-outline px-4 py-2 text-xs flex items-center gap-2 inline-flex">
+                        LIVE DASHBOARD <span class="material-symbols-outlined text-sm">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2: Sales Visualizations Dashboard -->
+            <div class="card overflow-hidden">
+                <div class="h-48 relative overflow-hidden bg-navy-mid">
+                    <img src="https://media.base44.com/images/public/6a678710d494d5df983d27b8/f78850351_generated_image.png" alt="Sales Visualizations Dashboard Preview" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-transparent opacity-60"></div>
+                </div>
+                <div class="p-6">
+                    <div class="flex gap-2 mb-4">
+                        <span class="tag flex items-center gap-1.5"><img src="https://cdn.simpleicons.org/html5/e34f26" class="w-3.5 h-3.5" alt="HTML5">HTML</span>
+                        <span class="tag flex items-center gap-1.5"><img src="https://cdn.simpleicons.org/javascript/f7df1e" class="w-3.5 h-3.5" alt="JavaScript">JS</span>
+                        <span class="tag">GRIDSTACK</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-text-primary mb-3">Sales Visualizations Dashboard</h4>
+                    <p class="text-text-secondary text-sm mb-6">
+                        Interactive sales dashboard with draggable widgets, real-time KPIs, and multi-format export. Built with ECharts, GridStack, and DuckDB for client-side analytics.
+                    </p>
+                    <a href="https://mohammad-sahil1.github.io/Sales-Visualizations-Dashboard/" target="_blank" rel="noopener" class="btn-outline px-4 py-2 text-xs flex items-center gap-2 inline-flex">
+                        LIVE DASHBOARD <span class="material-symbols-outlined text-sm">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3: Excel Sales Dashboard -->
+            <div class="card overflow-hidden">
+                <div class="h-48 relative overflow-hidden bg-navy-mid">
+                    <img src="https://media.base44.com/images/public/6a678710d494d5df983d27b8/a95d18af0_generated_image.png" alt="Sales and Target Performance Excel Dashboard Preview" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-transparent opacity-60"></div>
+                </div>
+                <div class="p-6">
+                    <div class="flex gap-2 mb-4">
+                        <span class="tag flex items-center gap-1.5"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_Office_Excel_(2019%E2%80%932025).svg" class="w-3.5 h-3.5" alt="Excel">EXCEL</span>
+                        <span class="tag">VBA</span>
+                        <span class="tag">DASHBOARD</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-text-primary mb-3">Sales & Target Performance Dashboard</h4>
+                    <p class="text-text-secondary text-sm mb-6">
+                        Advanced Excel dashboard with VBA macros for sales target tracking, KPI monitoring, and automated reporting. Includes conditional formatting and dynamic charts.
+                    </p>
+                    <a href="https://github.com/Mohammad-Sahil1/excel-sales-dashboard" target="_blank" rel="noopener" class="btn-outline px-4 py-2 text-xs flex items-center gap-2 inline-flex">
+                        VIEW ON GITHUB <span class="material-symbols-outlined text-sm">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SKILLS SECTION -->
+    <section id="skills" class="max-w-[1200px] mx-auto px-4 md:px-16 py-20">
+        <div class="mb-12">
+            <p class="section-label mb-2">EXPERTISE</p>
+            <h2 class="text-2xl font-semibold text-text-primary">Technical Skills</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="card p-8">
+                <div class="text-blue-accent mb-6">
+                    <span class="material-symbols-outlined text-4xl">database</span>
+                </div>
+                <h3 class="text-lg font-semibold text-text-primary mb-6">Data Management</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="tag flex items-center gap-1.5"><img src="https://cdn.simpleicons.org/mysql/00758F" class="w-3.5 h-3.5" alt="SQL">SQL</span>
+                    <span class="tag flex items-center gap-1.5"><img src="https://cdn.simpleicons.org/mysql/00758F" class="w-3.5 h-3.5" alt="MySQL">MySQL</span>
+                    <span class="tag flex items-center gap-1.5"><img src="https://cdn.simpleicons.org/postgresql/4169E1" class="w-3.5 h-3.5" alt="PostgreSQL">PostgreSQL</span>
+                </div>
+            </div>
+            <div class="card p-8">
+                <div class="text-blue-accent mb-6">
+                    <span class="material-symbols-outlined text-4xl">code_blocks</span>
+                </div>
+                <h3 class="text-lg font-semibold text-text-primary mb-6">Programming & ML</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="tag flex items-center gap-1.5"><img src="https://cdn.simpleicons.org/python/3776AB" class="w-3.5 h-3.5" alt="Python">Python</span>
+                    <span class="tag flex items-center gap-1.5"><img src="https://cdn.simpleicons.org/pandas/150458" class="w-3.5 h-3.5" alt="Pandas">Pandas/NumPy</span>
+                    <span class="tag flex items-center gap-1.5"><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" class="w-3.5 h-3.5" alt="Scikit-Learn">Scikit-Learn</span>
+                </div>
+            </div>
+            <div class="card p-8">
+                <div class="text-blue-accent mb-6">
+                    <span class="material-symbols-outlined text-4xl">bar_chart</span>
+                </div>
+                <h3 class="text-lg font-semibold text-text-primary mb-6">Visualization</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="tag flex items-center gap-1.5"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/New_Power_BI_Logo.svg" class="w-3.5 h-3.5" alt="Power BI">Power BI</span>
+                    <span class="tag flex items-center gap-1.5"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tableau_Logo.png" class="w-3.5 h-3.5 object-contain" alt="Tableau">Tableau</span>
+                    <span class="tag flex items-center gap-1.5"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_Office_Excel_(2019%E2%80%932025).svg" class="w-3.5 h-3.5" alt="Excel">Advanced Excel</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="max-w-[1200px] mx-auto px-4 md:px-16 py-20">
+        <div class="mb-12">
+            <p class="section-label mb-2">CREDENTIALS</p>
+            <h2 class="text-2xl font-semibold text-text-primary">Achievements & Certifications</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="card p-6">
+                <span class="material-symbols-outlined text-blue-accent mb-4 text-3xl">workspace_premium</span>
+                <h4 class="text-base font-semibold text-text-primary mb-1">Data Visualization</h4>
+                <p class="text-text-secondary text-sm mb-4">Acacia University</p>
+                <div class="flex flex-col gap-2">
+                    <a href="Acacia%20University%20Essentials%20of%20Data%20Visualization%20using%20MS%20Excel%20-%20Cerificate.pdf" download class="btn-outline px-4 py-2 text-xs flex items-center gap-2 w-full justify-center">
+                        <span class="material-symbols-outlined text-sm">download</span> Certificate
+                    </a>
+                    <a href="Acacia%20University%20Essentials%20of%20Data%20Visualization%20using%20MS%20Excel%20-%20Result.pdf" download class="btn-outline px-4 py-2 text-xs flex items-center gap-2 w-full justify-center">
+                        <span class="material-symbols-outlined text-sm">download</span> Result File
+                    </a>
+                </div>
+            </div>
+            <div class="card p-6">
+                <span class="material-symbols-outlined text-blue-accent mb-4 text-3xl">workspace_premium</span>
+                <h4 class="text-base font-semibold text-text-primary mb-1">Python Programming</h4>
+                <p class="text-text-secondary text-sm mb-4">Ai For Techies</p>
+                <div class="flex flex-col gap-2">
+                    <a href="Ai%20For%20Techies%20Python%20Certificate.pdf" download class="btn-outline px-4 py-2 text-xs flex items-center gap-2 w-full justify-center">
+                        <span class="material-symbols-outlined text-sm">download</span> Certificate
+                    </a>
+                </div>
+            </div>
+            <div class="card p-6">
+                <span class="material-symbols-outlined text-blue-accent mb-4 text-3xl">workspace_premium</span>
+                <h4 class="text-base font-semibold text-text-primary mb-1">Basics of Python</h4>
+                <p class="text-text-secondary text-sm mb-4">Cambridge International Qualification</p>
+                <div class="flex flex-col gap-2">
+                    <a href="Cambridge%20International%20Qualification%20-%20Basics%20of%20Python%20-%20Certificate.pdf" download class="btn-outline px-4 py-2 text-xs flex items-center gap-2 w-full justify-center">
+                        <span class="material-symbols-outlined text-sm">download</span> Certificate
+                    </a>
+                    <a href="Cambridge%20International%20Qualification%20-%20Basics%20of%20Python%20-%20Result.pdf" download class="btn-outline px-4 py-2 text-xs flex items-center gap-2 w-full justify-center">
+                        <span class="material-symbols-outlined text-sm">download</span> Result File
+                    </a>
+                </div>
+            </div>
+            <div class="card p-6">
+                <span class="material-symbols-outlined text-blue-accent mb-4 text-3xl">workspace_premium</span>
+                <h4 class="text-base font-semibold text-text-primary mb-1">Microsoft Power BI</h4>
+                <p class="text-text-secondary text-sm mb-4">Cambridge International Qualification</p>
+                <div class="flex flex-col gap-2">
+                    <a href="Cambridge%20International%20Qualification%20Basics%20of%20Microsoft%20Power%20BI-%20Certificate.pdf" download class="btn-outline px-4 py-2 text-xs flex items-center gap-2 w-full justify-center">
+                        <span class="material-symbols-outlined text-sm">download</span> Certificate
+                    </a>
+                    <a href="Cambridge%20International%20Qualification%20Basics%20of%20Microsoft%20Power%20BI-%20Result.pdf" download class="btn-outline px-4 py-2 text-xs flex items-center gap-2 w-full justify-center">
+                        <span class="material-symbols-outlined text-sm">download</span> Result File
+                    </a>
+                </div>
+            </div>
+            <div class="card p-6">
+                <span class="material-symbols-outlined text-blue-accent mb-4 text-3xl">workspace_premium</span>
+                <h4 class="text-base font-semibold text-text-primary mb-1">Master ChatGPT</h4>
+                <p class="text-text-secondary text-sm mb-4">Uniathena</p>
+                <div class="flex flex-col gap-2">
+                    <a href="Uniathena%20Master%20ChatGPT%20-%20OpenAI%20Certificate.pdf" download class="btn-outline px-4 py-2 text-xs flex items-center gap-2 w-full justify-center">
+                        <span class="material-symbols-outlined text-sm">download</span> Certificate
+                    </a>
+                    <a href="Uniathena%20Master%20ChatGPT%20-%20OpenAI%20Result.pdf" download class="btn-outline px-4 py-2 text-xs flex items-center gap-2 w-full justify-center">
+                        <span class="material-symbols-outlined text-sm">download</span> Result File
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CONTACT SECTION -->
+    <section id="contact" class="max-w-[1200px] mx-auto px-4 md:px-16 py-24">
+        <div class="card p-12 text-center relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-blue-accent/8 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-accent/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-text-primary mb-6">Let's build something data-driven</h2>
+                <p class="text-text-secondary mb-12 max-w-xl mx-auto">
+                    I am currently looking for new opportunities as a Data Analyst. If you are looking for someone who can bridge the gap between complex data and business strategy, let's connect.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="mailto:msahil2811@gmail.com" class="btn-primary px-10 py-4 text-sm flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-lg">mail</span> Email Me
+                    </a>
+                    <a href="tel:+97455521940" class="btn-outline px-10 py-4 text-sm flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-lg">call</span> +974 55521940
+                    </a>
+                    <a href="https://github.com/Mohammad-Sahil1" target="_blank" rel="noopener noreferrer" class="btn-outline px-10 py-4 text-sm flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-lg">terminal</span> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-12 bg-[#050d1a] border-t border-blue-accent/15 mt-12">
+    <div class="flex flex-col md:flex-row justify-between items-center max-w-[1200px] mx-auto px-4 md:px-16 gap-6">
+        <div>
+            <div class="text-blue-light font-semibold mb-1">Mohammad Sahil</div>
+            <p class="text-text-muted text-xs font-mono uppercase">Data Analyst — Doha, Qatar — Available for roles</p>
+        </div>
+
+        <div class="flex gap-4">
+            <a href="https://github.com/Mohammad-Sahil1" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-blue-light transition bg-white/5 p-3 rounded-xl border border-white/10">
+                <span class="material-symbols-outlined text-xl">terminal</span>
+            </a>
+            <a href="mailto:msahil2811@gmail.com" class="text-text-secondary hover:text-blue-light transition bg-white/5 p-3 rounded-xl border border-white/10">
+                <span class="material-symbols-outlined text-xl">mail</span>
+            </a>
+            <a href="tel:+97455521940" class="text-text-secondary hover:text-blue-light transition bg-white/5 p-3 rounded-xl border border-white/10">
+                <span class="material-symbols-outlined text-xl">call</span>
+            </a>
+        </div>
+
+        <a href="Mohammad_Sahil_CV.pdf" download class="btn-primary px-6 py-2 text-sm flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm">download</span> Download CV
+        </a>
+    </div>
+    <div class="text-center text-text-muted text-xs mt-8">
+        &copy; 2026 Mohammad Sahil. Built with passion for data.
+    </div>
+</footer>
+
+<script>
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const top = section.offsetTop - 100;
+            if (window.scrollY >= top) {
+                current = section.getAttribute('id');
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active-nav');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active-nav');
+            }
+        });
+    });
+
+    // Fade in on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.card').forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
+    });
+</script>
+
+</body>
+</html>
